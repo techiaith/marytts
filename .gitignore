@@ -16,3 +16,15 @@ test-output/
 
 # OSX
 .DS_Store
+
+# lang cy
+*.dict 
+*.fst 
+*.lts 
+*.lextxt 
+*.lexicon 
+*.list 
+marytts-languages/marytts-lang-cy/target/* 
+marytts-languages/marytts-lang-cy/lib/modules/cy/lexicon/*.txt
+marytts-languages/marytts-lang-cy/script/*
+wikidump/*
