@@ -19,8 +19,6 @@ test-output/
 
 # lang cy
 *.dict 
-*.fst 
-*.lts 
 *.lextxt 
 *.lexicon 
 *.list 
