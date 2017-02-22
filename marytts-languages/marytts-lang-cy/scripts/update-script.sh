@@ -1,7 +1,7 @@
 #!/bin/bash
 
-SOURCE_DIR="/opt/marytts/wikidump"
-TARGET_DIR="/opt/marytts/marytts-languages/marytts-lang-cy/script"
+SOURCE_DIR="/home/marytts/wikidump"
+TARGET_DIR="/home/marytts/marytts-languages/marytts-lang-cy/script"
 
 mkdir -p ${TARGET_DIR}
 

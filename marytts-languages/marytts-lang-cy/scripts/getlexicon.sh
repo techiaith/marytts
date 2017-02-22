@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DATA_SRC="http://techiaith.cymru/lts/"
-LEXICON_ROOT="/opt/marytts/marytts-languages/marytts-lang-cy/lib/modules/cy/lexicon"
+LEXICON_ROOT="/home/marytts/marytts-languages/marytts-lang-cy/lib/modules/cy/lexicon"
 
 # Check if the executables needed for this script are present in the system
 command -v wget >/dev/null 2>&1 ||\
