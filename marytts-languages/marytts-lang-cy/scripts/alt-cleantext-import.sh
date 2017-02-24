@@ -34,9 +34,7 @@ export MARY_BASE="`(cd "$BINDIR"/.. ; pwd)`"
 
 CLEANTEXT_FILE=$2
 
-echo $MYSQLHOST $CLEANTEXT_FILE
-
-python import-cleantext.py \
+python3 import-cleantext.py \
 	$MYSQLHOST \
 	$MYSQLUSER \
 	$MYSQLPASSWD \
