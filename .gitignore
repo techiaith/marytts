@@ -29,3 +29,4 @@ wikidump/*
 .java/
 .m2/
 .*history
+.ssh/*
