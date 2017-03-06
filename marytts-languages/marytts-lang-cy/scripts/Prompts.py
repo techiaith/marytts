@@ -1,7 +1,7 @@
 
 #!/usr/bin/env python 
 # #encoding: UTF-8 
-# PROMPTS = [    
+PROMPTS = [    
     {"identifier": "sample1", "text": u"EFYDD OEDD Y RHAN FWYAF OND ROEDD TRI O HAEARN CLEDDYF PEN GWAYWFFON A CHRYMAN"},
     {"identifier": "sample2", "text": u"DIM OND UN PERSON A GAIFF SIARAD AR Y TRO"},
     {"identifier": "sample3", "text": u"MAE UWCHGYNADLEDDAU O FEWN EWROP YN FAES GWAHANOL"},
