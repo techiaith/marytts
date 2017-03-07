@@ -3,7 +3,7 @@ import wave
 
 class SimpleRecorder(object):
 
-    def __init__(self, fname, rate=44100, channels=1,format=pyaudio.paInt16,frames_per_buffer=1024):
+    def __init__(self, fname, rate=48000, channels=1,format=pyaudio.paInt16,frames_per_buffer=1024):
 
         self._frames = []
         self._rate = rate

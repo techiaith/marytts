@@ -8,7 +8,7 @@ import time
 import SimpleRecorder
 
 # Variables for Pygame
-width = 750
+width = 850
 height = 480
 text_width = 20;
 
@@ -70,6 +70,7 @@ def display_message(message):
     pygame.display.flip()
 
 
+os.environ['SDL_VIDEO_CENTERED'] = '1'
 pygame.init()
 
 screen = pygame.display.set_mode((width,height))
@@ -91,6 +92,8 @@ recorder = None
 
 display_clear()
 display_message("Bysell bwlch i gychwyn")
+current_wav_file = None
+sound = None
 
 while not done:
 
@@ -100,16 +103,25 @@ while not done:
     for event in pygame.event.get():
 
         if event.type == pygame.KEYDOWN and \
-            event.key == pygame.K_SPACE and \
+            (event.key == pygame.K_SPACE or \
+            event.key == pygame.K_BACKSPACE) and \
             recording is False:
 
-            current_prompt_idx += 1
+            if event.key == pygame.K_SPACE:
+                current_prompt_idx += 1
+
+            if sound is not None:
+                sound.stop()
+
             display_clear()
             display_prompt(current_prompt_idx)
             display_message("recordio...")
             print "Recordio......"
+
             fname = outstanding_prompts[current_prompt_idx]["identifier"]
-            recorder = SimpleRecorder.SimpleRecorder(fname='audio/' + fname + '.wav')
+            current_wav_file = 'audio/' + fname + '.wav'
+
+            recorder = SimpleRecorder.SimpleRecorder(fname=current_wav_file)
             recorder.start_recording()
             recording = True
             break
@@ -121,8 +133,12 @@ while not done:
             print "Stop recordio"
             recorder.stop_recording()
             recording = False
+
+            sound = pygame.mixer.Sound(current_wav_file)
+            sound.play()
+
             display_clear()
-            display_message("Bysell bwlch i barhau.")
+            display_message("Bwlch i barhau. Backspace am eto")
             break
 
         if event.type == pygame.QUIT:
@@ -132,7 +148,7 @@ while not done:
 
         if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
             if recording:
-                recorder.stop_recording()            
+                recorder.stop_recording()
             done = True
 
     #clock.tick(60)
