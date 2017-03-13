@@ -91,6 +91,7 @@ public class AudioConverterGUI extends javax.swing.JFrame {
 		comboMaxAmplitude = new javax.swing.JComboBox();
 		jLabel6 = new javax.swing.JLabel();
 		tfSoxPath = new javax.swing.JTextField();
+		tfSoxPath.setText("/usr/bin/sox");
 		bBrowseSoxPath = new javax.swing.JButton();
 		cbTrimSilences = new javax.swing.JCheckBox();
 		jPanel2 = new javax.swing.JPanel();
@@ -145,6 +146,7 @@ public class AudioConverterGUI extends javax.swing.JFrame {
 		gridBagConstraints.insets = new java.awt.Insets(0, 25, 10, 5);
 		jPanel1.add(jLabel3, gridBagConstraints);
 
+		cbDownsample.setSelected(true);
 		cbDownsample.setText("Sampling rate conversion (down-sampling)");
 		cbDownsample.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
 		cbDownsample.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -177,7 +179,7 @@ public class AudioConverterGUI extends javax.swing.JFrame {
 		gridBagConstraints.insets = new java.awt.Insets(0, 25, 10, 0);
 		jPanel1.add(cbPowerNormalise, gridBagConstraints);
 
-		cbBestOnly.setSelected(true);
+		cbBestOnly.setSelected(false);
 		cbBestOnly.setText("Process only the best take of each sentence");
 		cbBestOnly.setToolTipText("Process a001.wav, but not a001a.wav, a001b.wav etc.");
 		cbBestOnly.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
@@ -190,7 +192,7 @@ public class AudioConverterGUI extends javax.swing.JFrame {
 		gridBagConstraints.insets = new java.awt.Insets(0, 0, 10, 0);
 		jPanel1.add(cbBestOnly, gridBagConstraints);
 
-		cbHighPassFilter.setSelected(true);
+		cbHighPassFilter.setSelected(false);
 		cbHighPassFilter.setText("Remove low-frequency noise below 50 Hz");
 		cbHighPassFilter.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
 		cbHighPassFilter.setMargin(new java.awt.Insets(0, 0, 0, 0));
