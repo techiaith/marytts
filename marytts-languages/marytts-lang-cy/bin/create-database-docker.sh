@@ -42,3 +42,11 @@ flush privileges;"
 
 echo "$MYSQLDB database has been created at host $MYSQLHOST, all privileges are granted to user $MYSQLUSER in the $MYSQLHOST and the password $MYSQLPASSWD"
 
+mysql --host=$MYSQLHOST --user="root" --password=$MYSQLPASSWD --database=$MYSQLDB -e \
+"CREATE TABLE ${LOCALE}_cleanText (id int UNSIGNED NOT NULL AUTO_INCREMENT, \
+                 cleanText MEDIUMBLOB NOT NULL, processed BOOLEAN, page_id int UNSIGNED NOT NULL, \
+                 text_id int UNSIGNED NOT NULL, PRIMARY KEY id (id) \
+                 ) MAX_ROWS=250000 AVG_ROW_LENGTH=10240 CHARACTER SET utf8;"
+
+echo "$MYSQLDB::${LOCALE}_cleanText has been created"
+

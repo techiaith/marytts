@@ -4,6 +4,7 @@
 set -o errexit
 
 DESCRIPTION="Export an clean text from MySQL to various formatted files"
+MYDIR="$(dirname "${BASH_SOURCE[0]}")"
 
 NUMARG=2
 if [ $# -ne $NUMARG ]
@@ -33,8 +34,9 @@ BINDIR="`dirname "$0"`"
 export MARY_BASE="`(cd "$BINDIR"/.. ; pwd)`"
 
 OUT_FILE=$2
+PYTHON_SCRIPT="${MYDIR}/export-cleantext.py"
 
-python3 export-cleantext.py \
+python3 ${PYTHON_SCRIPT} \
 	$MYSQLHOST \
 	$MYSQLUSER \
 	$MYSQLPASSWD \

@@ -4,6 +4,7 @@
 set -o errexit
 
 DESCRIPTION="Import an alternative clean text source into MySQL"
+MYDIR="$(dirname "${BASH_SOURCE[0]}")"
 
 NUMARG=2
 if [ $# -ne $NUMARG ]
@@ -34,7 +35,10 @@ export MARY_BASE="`(cd "$BINDIR"/.. ; pwd)`"
 
 CLEANTEXT_FILE=$2
 
-python3 import-cleantext.py \
+PYTHON_SCRIPT="${MYDIR}/import-cleantext.py"
+echo $PYTHON_SCRIPT
+
+python3 ${PYTHON_SCRIPT} \
 	$MYSQLHOST \
 	$MYSQLUSER \
 	$MYSQLPASSWD \
