@@ -6,7 +6,7 @@ set -o errexit
 DESCRIPTION="Export an clean text from MySQL to various formatted files"
 MYDIR="$(dirname "${BASH_SOURCE[0]}")"
 
-NUMARG=2
+NUMARG=1
 if [ $# -ne $NUMARG ]
 then
   echo "NAME:
