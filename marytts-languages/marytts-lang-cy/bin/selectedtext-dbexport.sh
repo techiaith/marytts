@@ -16,13 +16,12 @@ DESCRIPTION:
     $DESCRIPTION
 
 USAGE: 
-        `basename $0` [config_file] [exported_clean_text_file]
+        `basename $0` [config_file] 
         
         config_file: wkdb config file  
-        exported_clean_text_file: the file containing exported text. *.csv or *.py recognised.
 
 EXAMPLE:
-        `basename $0` /home/marytts/wikidump/wkdb.conf selection.csv" 
+        `basename $0` /home/marytts/wikidump/wkdb.conf" 
   exit 1
 fi
 
@@ -33,7 +32,7 @@ CONFIG_FILE="`dirname "$1"`/`basename "$1"`"
 BINDIR="`dirname "$0"`"
 export MARY_BASE="`(cd "$BINDIR"/.. ; pwd)`"
 
-OUT_FILE=$2
+OUT_FILE="/home/marytts/voices/recorder/Prompts.py"
 PYTHON_SCRIPT="${MYDIR}/export-cleantext.py"
 
 python3 ${PYTHON_SCRIPT} \
