@@ -1,6 +1,7 @@
 #!/bin/python3
 # -*- coding:utf-8 -*-
 import os
+import os.path
 import sys
 import zipfile
 import xml.etree.ElementTree as ET
@@ -10,8 +11,19 @@ voicename = sys.argv[1]
 marytts_version = sys.argv[2]
 marytts_home = sys.argv[3]
 
-source_package_dir=os.path.join(marytts_home, 'voice-builder', voicename, 'mary', 'voice-' + voicename, 'target')
-target_installation_dir=os.path.join(marytts_home, 'target', 'marytts-' + marytts_version)
+zipfilename = 'voice-' + voicename + '-' + marytts_version + '.zip'
+componentxmlfilename = 'voice-' + voicename + '-' + marytts_version + '-component.xml'
+
+source_package_dir = None
+
+print ("Chwilio am ffeiliau llais yn : %s" % os.getcwd())
+
+if os.path.isfile(zipfilename) and os.path.isfile(componentxmlfilename):
+    source_package_dir = os.getcwd()
+else:
+    source_package_dir = os.path.join(marytts_home, 'voice-builder', voicename, 'mary', 'voice-' + voicename, 'target')
+
+target_installation_dir = os.path.join(marytts_home, 'target', 'marytts-' + marytts_version)
 
 zipfileloc = os.path.join(source_package_dir, 'voice-' + voicename + '-' + marytts_version + '.zip')
 
@@ -33,5 +45,4 @@ xml_component_out_file = os.path.join(source_package_dir, 'voice-' + voicename +
 
 tree.write(open(xml_component_out_file,'w'), encoding='unicode')
 
-copyfile(xml_component_out_file, \
-         os.path.join(target_installation_dir,'installed', 'voice-' + voicename + '-' + marytts_version + '-component.xml'))
+copyfile(xml_component_out_file, os.path.join(target_installation_dir,'installed', 'voice-' + voicename + '-' + marytts_version + '-component.xml'))
