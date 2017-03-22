@@ -35,7 +35,7 @@ public class WelshPreprocess extends InternalModule {
 
 	private RuleBasedNumberFormat rbnf;
 	protected final String cardinalRule;
-	protected final String ordinalRule;
+	//protected final String ordinalRule;
 
 	static final ULocale CY_LOCALE = new ULocale.Builder().setLanguage("cy").build();
 
@@ -51,7 +51,7 @@ public class WelshPreprocess extends InternalModule {
 			e.printStackTrace();
 		}
 		this.cardinalRule = "%spellout-numbering";
-		this.ordinalRule = getOrdinalRuleName(rbnf);
+		//this.ordinalRule = getOrdinalRuleName(rbnf);
 	}
 
 	public MaryData process(MaryData d) throws Exception {
@@ -72,19 +72,21 @@ public class WelshPreprocess extends InternalModule {
 				continue;
 			}
 			String origText = MaryDomUtils.tokenText(t);
-			if (MaryDomUtils.tokenText(t).matches("\\d+(e|er|re|ère|ème)")) {
-				String matched = MaryDomUtils.tokenText(t).split("e|ere|er|re|ère|ème")[0];
-				if (matched.equals("1")) {
-					if (MaryDomUtils.tokenText(t).matches("\\d+er")) {
-						MaryDomUtils.setTokenText(t, expandOrdinal(Double.parseDouble(matched)));
-					} else {
-						String s = expandOrdinal(Double.parseDouble(matched));
-						MaryDomUtils.setTokenText(t, s.replace("ier", "ière"));
-					}
-				} else {
-					MaryDomUtils.setTokenText(t, expandOrdinal(Double.parseDouble(matched)));
-				}
-			} else if (MaryDomUtils.tokenText(t).matches("\\d+")) {
+			
+			//if (MaryDomUtils.tokenText(t).matches("\\d+(e|er|re|ère|ème)")) {
+			//	String matched = MaryDomUtils.tokenText(t).split("e|ere|er|re|ère|ème")[0];
+			//	if (matched.equals("1")) {
+			//		if (MaryDomUtils.tokenText(t).matches("\\d+er")) {
+			//			MaryDomUtils.setTokenText(t, expandOrdinal(Double.parseDouble(matched)));
+			//		} else {
+			//			String s = expandOrdinal(Double.parseDouble(matched));
+			//			MaryDomUtils.setTokenText(t, s.replace("ier", "ière"));
+			//		}
+			//	} else {
+			//		MaryDomUtils.setTokenText(t, expandOrdinal(Double.parseDouble(matched)));
+			//	}
+			//} else if (MaryDomUtils.tokenText(t).matches("\\d+")) {
+			if (MaryDomUtils.tokenText(t).matches("\\d+")) {
 				MaryDomUtils.setTokenText(t, expandNumber(Double.parseDouble(MaryDomUtils.tokenText(t))));
 			}
 			// if token isn't ignored but there is no handling rule don't add MTU
@@ -99,10 +101,10 @@ public class WelshPreprocess extends InternalModule {
 		return this.rbnf.format(number);
 	}
 
-	protected String expandOrdinal(double number) {
-		this.rbnf.setDefaultRuleSet(ordinalRule);
-		return this.rbnf.format(number);
-	}
+	//protected String expandOrdinal(double number) {
+	//	this.rbnf.setDefaultRuleSet(ordinalRule);
+	//	return this.rbnf.format(number);
+	//}
 
 	/**
 	 * Try to extract the rule name for "expand ordinal" from the given RuleBasedNumberFormat.
