@@ -3,32 +3,40 @@
 
 	<silence ph="_"/>
 
-    <vowel ph="I" vlng="s" vheight="1" vfront="3" vrnd="+"/>
     <vowel ph="I" vlng="l" vheight="1" vfront="3" vrnd="+"/>
-    <vowel ph="E" vlng="s" vheight="1" vfront="3" vrnd="+"/>
     <vowel ph="E" vlng="l" vheight="1" vfront="3" vrnd="+"/>
+    <vowel ph="A" vlng="l" vheight="1" vfront="1" vrnd="-"/>
+    <vowel ph="Y" vlng="l" vheight="1" vfront="3" vrnd="+"/>
+    <vowel ph="U" vlng="l" vheight="1" vfront="3" vrnd="+"/>
+    <vowel ph="W" vlng="l" vheight="1" vfront="3" vrnd="+"/>
+    <vowel ph="O" vlng="l" vheight="1" vfront="3" vrnd="+"/>
+    
+    <vowel ph="I" vlng="s" vheight="1" vfront="3" vrnd="+"/>
+    <vowel ph="E" vlng="s" vheight="1" vfront="3" vrnd="+"/>
 	<vowel ph="A" vlng="s" vheight="1" vfront="1" vrnd="-"/>
-	<vowel ph="A" vlng="l" vheight="1" vfront="1" vrnd="-"/>
-	<vowel ph="AE" vlng="l" vheight="1" vfront="1" vrnd="+"/> 
-	<vowel ph="AI" vlng="l" vheight="2" vfront="1" vrnd="+"/> 
-	<vowel ph="AU" vlng="l" vheight="3" vfront="3" vrnd="-"/>
-	<vowel ph="AW" vlng="l" vheight="2" vfront="3" vrnd="+"/>
-	<vowel ph="EI" vlng="l" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="EU" vlng="l" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="EW" vlng="l" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="IW" vlng="l" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="O" vlng="l" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="OE" vlng="l" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="OI" vlng="l" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="OW" vlng="l" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="U" vlng="l" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="UW" vlng="l" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="W" vlng="l" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="WY" vlng="l" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="Y" vlng="l" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="YW" vlng="l" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="@" vlng="l" vheight="1" vfront="3" vrnd="-"/> 
-	<vowel ph="@W" vlng="l" vheight="1" vfront="3" vrnd="-"/>
+	<vowel ph="Y" vlng="s" vheight="1" vfront="3" vrnd="+"/>
+	<vowel ph="U" vlng="s" vheight="1" vfront="3" vrnd="+"/>
+	<vowel ph="W" vlng="s" vheight="1" vfront="3" vrnd="+"/>
+	<vowel ph="O" vlng="s" vheight="1" vfront="3" vrnd="+"/>
+	<vowel ph="@" vlng="s" vheight="1" vfront="3" vrnd="-"/> 
+	
+	<vowel ph="AI" vlng="d" vheight="1" vfront="1" vrnd="+"/> 
+	<vowel ph="AE" vlng="d" vheight="1" vfront="1" vrnd="+"/>
+	<vowel ph="AU" vlng="d" vheight="3" vfront="3" vrnd="-"/>
+	<vowel ph="AW" vlng="d" vheight="2" vfront="3" vrnd="+"/>
+	<vowel ph="EI" vlng="d" vheight="1" vfront="3" vrnd="+"/>
+	<vowel ph="EU" vlng="d" vheight="1" vfront="3" vrnd="+"/>
+	<vowel ph="EW" vlng="d" vheight="1" vfront="3" vrnd="+"/>
+	<vowel ph="OE" vlng="d" vheight="1" vfront="3" vrnd="+"/>
+	<vowel ph="OI" vlng="d" vheight="1" vfront="3" vrnd="+"/>
+	<vowel ph="OU" vlng="d" vheight="1" vfront="3" vrnd="+"/>
+	<vowel ph="OW" vlng="d" vheight="1" vfront="3" vrnd="+"/>
+	<vowel ph="OY" vlng="d" vheight="1" vfront="3" vrnd="+"/>
+	<vowel ph="IW" vlng="d" vheight="1" vfront="3" vrnd="+"/>
+	<vowel ph="UW" vlng="d" vheight="1" vfront="3" vrnd="+"/>
+	<vowel ph="WY" vlng="d" vheight="1" vfront="3" vrnd="+"/>
+	<vowel ph="YW" vlng="d" vheight="1" vfront="3" vrnd="+"/>
+	<vowel ph="@W" vlng="d" vheight="1" vfront="3" vrnd="-"/>
 
 	<consonant ph="b" ctype="s" cplace="l" cvox="-"/>
 	<consonant ph="d" ctype="s" cplace="a" cvox="+"/>
