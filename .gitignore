@@ -25,9 +25,6 @@ test-output/
 *.list 
 marytts-languages/marytts-lang-cy/target/* 
 marytts-languages/marytts-lang-cy/lib/modules/cy/lexicon/*.txt
-marytts-languages/marytts-lang-cy/scripts/alt-cleantext/*
-marytts-languages/marytts-lang-cy/scripts/audio/*
-wikidump/*
 .java/
 .m2/
 .*history

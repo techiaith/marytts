@@ -1,4 +1,4 @@
-##!/bin/sh
+#!/bin/sh
 
 # EXIT ERROR settings 
 set -o errexit

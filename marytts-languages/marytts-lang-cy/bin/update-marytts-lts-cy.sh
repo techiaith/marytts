@@ -1,7 +1,9 @@
 #!/bin/bash
 
-LIB_SRC="lib/modules/cy/lexicon"
-MARYTTS_CY_SRC="src/main/resources/marytts/language/cy/lexicon"
+LIB_SRC="/home/marytts/marytts-languages/marytts-lang-cy/lib/modules/cy/lexicon"
+MARYTTS_CY_SRC="/home/marytts/marytts-languages/marytts-lang-cy/src/main/resources/marytts/language/cy/lexicon"
+
+getlexicon-cy.sh
 
 lexicon_lts_pos_builder.sh ${LIB_SRC}/allophones.cy.xml ${LIB_SRC}/cy.txt
 
