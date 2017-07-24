@@ -32,7 +32,7 @@ CONFIG_FILE="`dirname "$1"`/`basename "$1"`"
 BINDIR="`dirname "$0"`"
 export MARY_BASE="`(cd "$BINDIR"/.. ; pwd)`"
 
-OUT_FILE="/home/marytts/voices/recorder/Prompts.py"
+OUT_FILE="/home/marytts/voice-builder/recorder/Prompts.py"
 PYTHON_SCRIPT="${MYDIR}/export-cleantext.py"
 
 python3 ${PYTHON_SCRIPT} \
