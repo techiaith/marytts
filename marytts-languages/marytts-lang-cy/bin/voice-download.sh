@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # EXIT ERROR settings 
 set -o errexit
@@ -7,7 +7,7 @@ DESCRIPTION="Download a pre-built Welsh voice"
 MYDIR="$(dirname "${BASH_SOURCE[0]}")"
 
 MARYTTS_VERSION="5.2"
-MARYTTS_HOME="/home/marytts"
+MARYTTS_HOME="${PWD}"
 
 NUMARG=1
 if [ $# -ne $NUMARG ]
@@ -39,3 +39,4 @@ python3 ${PYTHON_SCRIPT} \
 	${VOICE_NAME} \
         ${MARYTTS_VERSION} \
         ${MARYTTS_HOME}	
+
