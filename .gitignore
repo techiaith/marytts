@@ -29,3 +29,4 @@ marytts-languages/marytts-lang-cy/lib/modules/cy/lexicon/*.txt
 .m2/
 .*history
 .ssh/*
+voice-*
