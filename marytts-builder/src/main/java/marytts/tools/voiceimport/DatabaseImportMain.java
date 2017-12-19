@@ -126,7 +126,7 @@ public class DatabaseImportMain extends JFrame {
 				configButton.setPreferredSize(new Dimension(configIcon.getIconWidth(), configIcon.getIconHeight()));
 				configButton.addActionListener(new ConfigButtonActionListener(nextGroup[i]));
 				configButton.setBorderPainted(false);
-				// System.out.println("Adding checkbox for "+components[i].getClass().getName());
+				System.out.println("Adding checkbox for "+components[i].getClass().getName());
 				checkboxes[compIndex] = new JCheckBox(nextGroup[i]);
 				checkboxes[compIndex].setFocusable(true);
 				// checkboxes[i].setPreferredSize(new Dimension(200, 30));
@@ -340,7 +340,7 @@ public class DatabaseImportMain extends JFrame {
 				line = line.trim();
 				if (line.startsWith("#") || line.equals(""))
 					continue;
-				// System.out.println(line);
+				System.out.println(line);
 				String[] lineSplit = line.split(" ");
 				if (lineSplit[0].equals("group")) {
 					// we have a group
@@ -392,7 +392,7 @@ public class DatabaseImportMain extends JFrame {
 			throw new IllegalArgumentException("Cannot determine voice building directory.");
 		}
 		File wavDir = new File(voiceDir, "wav");
-		// System.out.println(System.getProperty("user.dir")+System.getProperty("file.separator")+"wav");
+		System.out.println(System.getProperty("user.dir")+System.getProperty("file.separator")+"wav");
 		assert wavDir.exists() : "no wav dir at " + wavDir.getAbsolutePath();
 
 		/* Read the list of components */
@@ -466,7 +466,7 @@ public class DatabaseImportMain extends JFrame {
 			for (int j = 1; j < nextComps.length; j++) {
 				// get the class name of this component
 				String className = nextComps[j];
-				// System.out.println(className);
+				System.out.println(className);
 				// create a new instance of this class and store in compsList
 				compsList.add((VoiceImportComponent) Class.forName(className).newInstance());
 				// remove "de.dfki...." from class name and store in groups2comps
