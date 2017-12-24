@@ -12,11 +12,11 @@ voiceimport.sh Festvox2MaryTranscripts
 voiceimport.sh AllophnesExtractor
 voiceimport.sh HTKLabeler
 voiceimport.sh LabelPauseDeleter
-voiceimport.sh LabelledFilesInspector
+#voiceimport.sh LabelledFilesInspector
 voiceimport.sh PhoneUnitLabelComputer
 voiceimport.sh HalfPhoneUnitLabelComputer
 voiceimport.sh TranscriptionAligner
-voiceimport.sh FeatureSelection
+#voiceimport.sh FeatureSelection
 voiceimport.sh PhoneUnitFeatureComputer
 voiceimport.sh HalfPhoneUnitFeatureComputer
 voiceimport.sh PhoneLabelFeatureAligner
