@@ -106,7 +106,7 @@ public class LabelledFilesInspectorHeadless extends VoiceImportComponent {
 		if (!extractedPmDirFile.exists())
 			extractedPmDirFile.mkdir();
 
-		System.out.println("Skipping manually inspecting " bnl.getLength() + " files ");
+		System.out.println("Skipping manually inspecting " + bnl.getLength() + " files ");
 		return true;
 	}
 	
