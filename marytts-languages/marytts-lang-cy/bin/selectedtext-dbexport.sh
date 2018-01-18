@@ -32,9 +32,10 @@ CONFIG_FILE="`dirname "$1"`/`basename "$1"`"
 BINDIR="`dirname "$0"`"
 export MARY_BASE="`(cd "$BINDIR"/.. ; pwd)`"
 
-OUT_FILE="/home/marytts/voice-builder/recorder/Prompts.py"
 PYTHON_SCRIPT="${MYDIR}/export-cleantext.py"
 
+OUT_FILE="/home/marytts/voice-builder/recorder/Prompts.py"
+echo $OUT_FILE
 python3 ${PYTHON_SCRIPT} \
 	$MYSQLHOST \
 	$MYSQLUSER \
@@ -43,4 +44,16 @@ python3 ${PYTHON_SCRIPT} \
 	$LOCALE \
 	$SELECTEDSENTENCESTABLENAME \
 	$OUT_FILE
-	
+
+
+OUT_FILE="/home/marytts/voice-builder/recorder/Prompts.txt"
+echo $OUT_FILE
+python3 ${PYTHON_SCRIPT} \
+        $MYSQLHOST \
+        $MYSQLUSER \
+        $MYSQLPASSWD \
+        $MYSQLDB \
+        $LOCALE \
+        $SELECTEDSENTENCESTABLENAME \
+        $OUT_FILE
+

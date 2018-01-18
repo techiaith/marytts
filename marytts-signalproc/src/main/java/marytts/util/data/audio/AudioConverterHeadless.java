@@ -60,8 +60,9 @@ public class AudioConverterHeadless {
 	public static void main(String args[]) {
 
                 try {
-                        String inDirPath = "/home/marytts/voice-builder/wispr/recordings";
-                        String outDirPath = "/home/marytts/voice-builder/wispr/wav";
+			String voice_name = args[0];
+                        String inDirPath = "/home/marytts/voice-builder/" + voice_name + "/recordings";
+                        String outDirPath = "/home/marytts/voice-builder/" + voice_name + "/wav";
                         boolean bestOnly = false;
                         boolean stereoMono = false;
                         int whichChannel = AudioPlayer.LEFT_ONLY;
