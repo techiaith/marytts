@@ -1,68 +1,94 @@
 <allophones name="sampa" xml:lang="cy"
-	features="vheight vfront vrnd ctype cplace cvox">
+        features="vheight vfront vrnd ctype cplace cvox">
 
-	<silence ph="_"/>
+        <silence ph="_"/>
 
-	<vowel ph="A" vling="1" vheight="1" vfront="1" vrnd="-"/>
-	<vowel ph="E" vling="1" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="I" vling="1" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="O" vling="1" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="U" vling="1" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="W" vling="1" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="Y" vling="1" vheight="1" vfront="3" vrnd="+"/>
+        <vowel ph="a" vling="1" vheight="1" vfront="1" vrnd="-"/>
+        <vowel ph="e" vling="1" vheight="1" vfront="3" vrnd="+"/>
+        <vowel ph="i" vling="1" vheight="1" vfront="3" vrnd="+"/>
+        <vowel ph="o" vling="1" vheight="1" vfront="3" vrnd="+"/>
+        <vowel ph="w" vling="1" vheight="1" vfront="3" vrnd="+"/>
+        <vowel ph="y" vling="1" vheight="1" vfront="3" vrnd="+"/>
 
-	<vowel ph="AI" vling="d" vheight="1" vfront="1" vrnd="+"/> 
-	<vowel ph="AE" vling="d" vheight="1" vfront="1" vrnd="+"/> 
-	<vowel ph="AE1" vling="d" vheight="1" vfront="1" vrnd="-"/>
-	<vowel ph="AU" vling="d" vheight="3" vfront="3" vrnd="-"/>		
-	<vowel ph="AW" vling="d" vheight="2" vfront="3" vrnd="+"/>
-	<vowel ph="EI" vling="d" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="EU" vling="d" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="EW" vling="d" vheight="1" vfront="3" vrnd="+"/>	
-	<vowel ph="OE" vling="d" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="OI" vling="d" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="OW" vling="d" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="OY" vling="d" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="IW" vling="d" vheight="1" vfront="3" vrnd="+"/>	
-	<vowel ph="UW" vling="d" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="WY" vling="d" vheight="1" vfront="3" vrnd="+"/>
-	<vowel ph="YW" vling="d" vheight="1" vfront="3" vrnd="+"/>	
-	<vowel ph="@W" vling="d" vheight="1" vfront="3" vrnd="+"/>
+        <vowel ph="@" vling="d" vheight="1" vfront="1" vrnd="+"/>
+        <vowel ph="@@" vling="d" vheight="1" vfront="1" vrnd="-"/>
 
-	<consonant ph="b" ctype="s" cplace="l" cvox="-"/>
-	<consonant ph="d" ctype="s" cplace="a" cvox="+"/>
-	<consonant ph="g" ctype="s" cplace="v" cvox="+"/>
-	<consonant ph="p" ctype="a" cplace="p" cvox="+"/>
-	<consonant ph="t" ctype="a" cplace="p" cvox="+"/>	
-	<consonant ph="c" ctype="s" cplace="l" cvox="+"/>
-	
-	<consonant ph="f" ctype="s" cplace="v" cvox="+"/>
-	<consonant ph="ff" ctype="s" cplace="v" cvox="+"/>
-	<consonant ph="dd" ctype="s" cplace="v" cvox="-"/>
-	<consonant ph="th" ctype="a" cplace="p" cvox="+"/>	
-	<consonant ph="ch" ctype="s" cplace="a" cvox="-"/>
-	<consonant ph="h" ctype="s" cplace="v" cvox="+"/>
-	<consonant ph="s" ctype="a" cplace="p" cvox="+"/>	
-	<consonant ph="sh" ctype="a" cplace="p" cvox="+"/>	
+        <vowel ph="aa" vling="d" vheight="1" vfront="1" vrnd="+"/>
+        <vowel ph="aay" vling="d" vheight="3" vfront="3" vrnd="-"/>
+        <vowel ph="ai" vling="d" vheight="1" vfront="3" vrnd="+"/>
+        <vowel ph="au" vling="d" vheight="1" vfront="3" vrnd="+"/>
+        <vowel ph="ay" vling="d" vheight="1" vfront="3" vrnd="+"/>
 
-	<consonant ph="dz" ctype="a" cplace="p" cvox="-"/>
-	<consonant ph="ts" ctype="a" cplace="p" cvox="+"/>	
+        <vowel ph="ee" vling="d" vheight="1" vfront="1" vrnd="+"/>
+        <vowel ph="ei" vling="d" vheight="3" vfront="3" vrnd="-"/>
+        <vowel ph="eu" vling="d" vheight="1" vfront="3" vrnd="+"/>
+        <vowel ph="ey" vling="d" vheight="1" vfront="3" vrnd="+"/>
+        
+        <vowel ph="ii" vling="d" vheight="1" vfront="1" vrnd="+"/>
+        <vowel ph="iu" vling="d" vheight="3" vfront="3" vrnd="-"/>
 
-	<consonant ph="m" ctype="s" cplace="v" cvox="+"/>
-	<consonant ph="n" ctype="s" cplace="v" cvox="+"/>
-	<consonant ph="ng" ctype="s" cplace="v" cvox="+"/>
-	
-	<consonant ph="l" ctype="s" cplace="v" cvox="+"/>
-	<consonant ph="ll" ctype="s" cplace="v" cvox="+"/>
-	
-	<consonant ph="r" ctype="a" cplace="p" cvox="+"/>	
-	<consonant ph="rh" ctype="a" cplace="p" cvox="+"/>	
+        <vowel ph="j" vling="d" vheight="1" vfront="1" vrnd="+"/>
+        <vowel ph="jh" vling="d" vheight="1" vfront="1" vrnd="-"/>
+        
+        <vowel ph="oa" vling="d" vheight="1" vfront="1" vrnd="+"/>
+        <vowel ph="oi" vling="d" vheight="3" vfront="3" vrnd="-"/>
+        <vowel ph="oo" vling="d" vheight="1" vfront="3" vrnd="+"/>
+        <vowel ph="oy" vling="d" vheight="1" vfront="3" vrnd="+"/>
 
-	<consonant ph="j" ctype="s" cplace="v" cvox="+"/>
-	
-	<consonant ph="ngh" ctype="s" cplace="v" cvox="+"/>
-	<consonant ph="nh" ctype="a" cplace="p" cvox="-"/>
-	<consonant ph="mh" ctype="a" cplace="p"	cvox="-"/>
+        <vowel ph="ui" vling="d" vheight="1" vfront="1" vrnd="+"/>
+        <vowel ph="uu" vling="d" vheight="1" vfront="1" vrnd="-"/>
+        <vowel ph="uy" vling="d" vheight="2" vfront="3" vrnd="+"/>
+        
+        <vowel ph="yu" vling="d" vheight="1" vfront="1" vrnd="+"/>
+        <vowel ph="yy" vling="d" vheight="3" vfront="3" vrnd="-"/>
+
+        <consonant ph="b" ctype="s" cplace="l" cvox="-"/>
+
+        <consonant ph="ch" ctype="s" cplace="v" cvox="+"/>
+
+        <consonant ph="d" ctype="a" cplace="p" cvox="+"/>
+        <consonant ph="dh" ctype="s" cplace="v" cvox="+"/>
+
+        <consonant ph="f" ctype="s" cplace="v" cvox="-"/>
+
+        <consonant ph="g" ctype="s" cplace="a" cvox="-"/>
+
+        <consonant ph="h" ctype="a" cplace="p" cvox="+"/>
+        <consonant ph="hh" ctype="a" cplace="p" cvox="+"/>
+
+        <consonant ph="k" ctype="a" cplace="p" cvox="+"/>
+
+        <consonant ph="l" ctype="s" cplace="v" cvox="+"/>
+        <consonant ph="lh" ctype="s" cplace="v" cvox="+"/>
+        <consonant ph="lw" ctype="s" cplace="v" cvox="+"/>
+
+        <consonant ph="m" ctype="a" cplace="p" cvox="+"/>
+        <consonant ph="mh" ctype="s" cplace="v" cvox="+"/>
+
+        <consonant ph="n" ctype="a" cplace="p" cvox="+"/>
+        <consonant ph="ng" ctype="a" cplace="p" cvox="-"/>
+        <consonant ph="ngh" ctype="s" cplace="v" cvox="+"/>
+        <consonant ph="nh" ctype="s" cplace="v" cvox="+"/>
+        <consonant ph="nw" ctype="s" cplace="v" cvox="+"/>
+
+        <consonant ph="p" ctype="s" cplace="v" cvox="+"/>
+
+        <consonant ph="r" ctype="s" cplace="v" cvox="+"/>
+        <consonant ph="rh" ctype="a" cplace="p" cvox="-"/>
+        <consonant ph="rw" ctype="a" cplace="p" cvox="-"/>
+
+        <consonant ph="s" ctype="a" cplace="p" cvox="+"/>
+        <consonant ph="sh" ctype="s" cplace="v" cvox="+"/>
+
+        <consonant ph="t" ctype="a" cplace="p" cvox="-"/>
+        <consonant ph="th" ctype="a" cplace="p" cvox="-"/>
+
+        <consonant ph="v" ctype="a" cplace="p" cvox="+"/>
+
+        <consonant ph="x" ctype="s" cplace="v" cvox="+"/>
+
+        <consonant ph="z" ctype="a" cplace="p" cvox="-"/>
+        <consonant ph="zh" ctype="a" cplace="p" cvox="-"/>
 
 </allophones>
 
