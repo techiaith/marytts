@@ -1,8 +1,8 @@
 #!/bin/bash
 
-MARYTTS_VERSION="5.2"
-MARYTTS_HOME="/home/marytts"
-MARYTTS_CY_HOME="/home/marytts/marytts-languages/marytts-lang-cy"
+#MARYTTS_VERSION="5.2"
+#MARYTTS_HOME="/home/marytts"
+#MARYTTS_CY_HOME="/home/marytts/marytts-languages/marytts-lang-cy"
 
 mvn install
 
