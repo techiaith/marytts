@@ -12,3 +12,4 @@ cp ${LIB_SRC}/cy.lts ${MARYTTS_CY_SRC}/
 cp ${LIB_SRC}/cy_lexicon.fst ${MARYTTS_CY_SRC}/
 
 find ${LIB_SRC} -type f -not -name '*.xml' -not -name '*.txt' -print0 | xargs -0 rm --
+
