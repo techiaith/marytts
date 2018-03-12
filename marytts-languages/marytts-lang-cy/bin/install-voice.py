@@ -13,10 +13,12 @@ voicename = sys.argv[1]
 marytts_version = sys.argv[2]
 marytts_home = sys.argv[3]
 
+print (voicename, marytts_version, marytts_home)
+
 zipfilename = 'voice-' + voicename + '-' + marytts_version + '.zip'
 componentxmlfilename = 'voice-' + voicename + '-' + marytts_version + '-component.xml'
 
-source_package_dir = os.path.join(marytts_home, 'mary', 'voice-' + voicename, 'target')
+source_package_dir = os.path.join(marytts_home, 'voice-builder', voicename, 'mary', 'voice-' + voicename, 'target')
 
 print ("Chwilio am ffeiliau llais yn : %s" % source_package_dir)
 
