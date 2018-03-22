@@ -1,13 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
 # EXIT ERROR settings 
 set -o errexit
 
 DESCRIPTION="Install built voice into a MaryTTS system"
 MYDIR="$(dirname "${BASH_SOURCE[0]}")"
-
-MARYTTS_VERSION="5.2"
-MARYTTS_HOME="/home/marytts"
 
 NUMARG=1
 if [ $# -ne $NUMARG ]
