@@ -25,18 +25,22 @@ if os.path.isfile(zipfilename) and os.path.isfile(componentxmlfilename):
 
 if source_package_dir is None:
     possible_source_package_dir = os.path.join(marytts_home, 'voice-builder', voicename, 'mary', 'voice-' + voicename, 'target')
+    print ("Chwilio am ffeiliau llais yn : %s" % possible_source_package_dir)
     if os.path.isfile(os.path.join(possible_source_package_dir, zipfilename)) and os.path.isfile(os.path.join(possible_source_package_dir, componentxmlfilename)):
         source_package_dir = possible_source_package_dir
+
+print ( "Wedi canfod yn %s " % source_package_dir )
+
 
 #
 target_installation_dir = os.path.join(marytts_home, 'target', 'marytts-' + marytts_version)
 
-zipfileloc = os.path.join(source_package_dir, 'voice-' + voicename + '-' + marytts_version + '.zip')
+zipfileloc = os.path.join(source_package_dir, zipfilename)
 zippedfile = zipfile.ZipFile(zipfileloc)
 zippedfile.extractall(target_installation_dir)
 
 #
-xml_component_file = os.path.join(source_package_dir, 'voice-' + voicename + '-' + marytts_version + '-component.xml')
+xml_component_file = os.path.join(source_package_dir, componentxmlfilename)
 tree = ET.parse(xml_component_file)
 marytts_install = tree.getroot()
 
