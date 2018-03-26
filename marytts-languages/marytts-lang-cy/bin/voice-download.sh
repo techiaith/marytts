@@ -6,8 +6,6 @@ set -o errexit
 DESCRIPTION="Download a pre-built Welsh voice"
 MYDIR="$(dirname "${BASH_SOURCE[0]}")"
 
-MARYTTS_VERSION="5.2"
-MARYTTS_HOME="${PWD}"
 
 NUMARG=1
 if [ $# -ne $NUMARG ]
@@ -28,8 +26,6 @@ EXAMPLE:
   exit 1
 fi
 
-BINDIR="`dirname "$0"`"
-export MARY_BASE="`(cd "$BINDIR"/.. ; pwd)`"
 
 VOICE_NAME=$1
 
