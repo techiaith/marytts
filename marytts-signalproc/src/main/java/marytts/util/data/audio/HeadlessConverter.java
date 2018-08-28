@@ -333,16 +333,17 @@ public class HeadlessConverter extends Thread {
 		private void samplingRateConverter(String waveFile, int targetSamplingRate) throws IOException {
 
 			Runtime rtime = Runtime.getRuntime();
-			String soxCommandLine = soxPath + " " + waveFile + " -r " + targetSamplingRate + " tempOut.wav";
+
+			String usrHome = System.getProperty("user.home");
+			File outFile = new File(usrHome, "tempOut.wav");
+			
+			String soxCommandLine = soxPath + " " + waveFile + " -r " + targetSamplingRate + " " + outFile.getAbsolutePath();
 			Process process = rtime.exec(soxCommandLine);
 			try {
 				process.waitFor();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-
-			File outFile = new File("tempOut.wav");
-
 			if (!outFile.renameTo(new File(waveFile)))
 				FileUtils.copy(outFile.getAbsolutePath(), waveFile);
 		}
@@ -436,8 +437,9 @@ public class HeadlessConverter extends Thread {
 			int numClusters = 4;
 			double minimumStartSilenceInSeconds = 0.5;
 			double minimumEndSilenceInSeconds = 0.5;
-
-			File tmpFile = new File("tmpAudio.wav");
+			String usrdir = System.getProperty("user.home");
+			System.out.println("tmpAudio created in " + usrdir);	
+			File tmpFile = new File(usrdir, "tmpAudio.wav");
 
 			AudioConverterUtils.removeEndpoints(wavFile.getAbsolutePath(), tmpFile.getAbsolutePath(), energyBufferLength,
 					speechStartLikelihood, speechEndLikelihood, shiftFromMinimumEnergyCenter, numClusters,
