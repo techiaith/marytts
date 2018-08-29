@@ -118,6 +118,9 @@ public class DatabaseImportMainHeadless {
 		Map<String, String> groups2Names = new HashMap<String, String>();
 		Map<String, List<String>> groups2Components = new HashMap<String, List<String>>();
 		try {
+
+			System.out.println("DatabaseImportMainHeadless::readComponentList " + file);
+
 			BufferedReader in = new BufferedReader(new InputStreamReader(fileIn, "UTF-8"));
 			String line;
 			while ((line = in.readLine()) != null) {
@@ -155,6 +158,7 @@ public class DatabaseImportMainHeadless {
 		} catch (IOException e) {
 			throw new IOException("Problem reading list of voice import components -- importMain.config seems broken", e);
 		}
+		
 		String[][] result = new String[groups.size()][];
 		for (int i = 0; i < groups.size(); i++) {
 			String groupKey = groups.get(i);
@@ -179,7 +183,7 @@ public class DatabaseImportMainHeadless {
 			throw new IllegalArgumentException("Cannot determine voice building directory.");
 		}
 		File wavDir = new File(voiceDir, "wav");
-		//System.out.println(System.getProperty("user.dir")+System.getProperty("file.separator")+"wav");
+		System.out.println(System.getProperty("user.dir")+System.getProperty("file.separator")+"wav");
 		assert wavDir.exists() : "no wav dir at " + wavDir.getAbsolutePath();
 
 		/* Read the list of components */

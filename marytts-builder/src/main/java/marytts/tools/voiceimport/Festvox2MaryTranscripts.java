@@ -67,6 +67,9 @@ public class Festvox2MaryTranscripts extends VoiceImportComponent {
 	/**/
 	public boolean compute() throws IOException {
 		// check if transcription file exists
+
+		System.out.println("Festvox2MaryTranscriptions::compute()");
+
 		textFile = new File(getProp(TRANSCRIPTFILE));
 		if (!textFile.exists())
 			throw new IOException("No such file: " + textFile);
@@ -85,6 +88,7 @@ public class Festvox2MaryTranscripts extends VoiceImportComponent {
 				PrintWriter out = new PrintWriter(new OutputStreamWriter(new FileOutputStream(new File(textDir, basename
 						+ db.getProp(db.TEXTEXT))), "UTF-8"));
 				String text = line.substring(line.indexOf("\"") + 1, line.lastIndexOf("\""));
+				System.out.println(text);
 				out.print(text);
 				out.flush();
 				out.close();
