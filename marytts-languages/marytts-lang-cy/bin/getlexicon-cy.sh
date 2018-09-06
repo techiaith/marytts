@@ -1,8 +1,6 @@
 #!/bin/bash
-
 DATA_SRC="http://techiaith.cymru/lts/"
-LEXICON_ROOT="/home/marytts/marytts-languages/marytts-lang-cy/lib/modules/cy/lexicon"
-
+LEXICON_ROOT="${MARYTTS_CY_HOME}/lib/modules/cy/lexicon"
 MYDIR="$(dirname "${BASH_SOURCE[0]}")"
 
 # Check if the executables needed for this script are present in the system

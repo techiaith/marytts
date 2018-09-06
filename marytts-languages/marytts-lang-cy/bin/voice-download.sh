@@ -6,7 +6,6 @@ set -o errexit
 DESCRIPTION="Download a pre-built Welsh voice"
 MYDIR="$(dirname "${BASH_SOURCE[0]}")"
 
-
 NUMARG=1
 if [ $# -ne $NUMARG ]
 then
