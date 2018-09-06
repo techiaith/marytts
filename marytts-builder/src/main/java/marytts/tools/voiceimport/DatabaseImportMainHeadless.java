@@ -119,7 +119,7 @@ public class DatabaseImportMainHeadless {
 		Map<String, List<String>> groups2Components = new HashMap<String, List<String>>();
 		try {
 
-			System.out.println("DatabaseImportMainHeadless::readComponentList " + file);
+			System.out.println("DatabaseImportMainHeadless::readComponentList " + fileIn);
 
 			BufferedReader in = new BufferedReader(new InputStreamReader(fileIn, "UTF-8"));
 			String line;
@@ -178,12 +178,16 @@ public class DatabaseImportMainHeadless {
 
 
 	public static void main(String[] args) throws Exception {
+
+		System.out.println("DatabaseImportHeadless::main ");
+
 		File voiceDir = determineVoiceBuildingDir(args);
+
 		if (voiceDir == null) {
 			throw new IllegalArgumentException("Cannot determine voice building directory.");
 		}
 		File wavDir = new File(voiceDir, "wav");
-		System.out.println(System.getProperty("user.dir")+System.getProperty("file.separator")+"wav");
+		System.out.println(System.getProperty("user.dir") + System.getProperty("file.separator")+"wav");
 		assert wavDir.exists() : "no wav dir at " + wavDir.getAbsolutePath();
 
 		/* Read the list of components */
@@ -274,6 +278,8 @@ public class DatabaseImportMainHeadless {
 				break;
 			}
 		}
+
+		System.out.println("DatabaseImportHeadless::determinVoiceBuildingDir voiceBuildingDir: " + voiceBuildingDir);
 		
 		System.setProperty("user.dir", voiceBuildingDir);
 		if (voiceBuildingDir != null) {

@@ -88,7 +88,7 @@ public class Festvox2MaryTranscripts extends VoiceImportComponent {
 				PrintWriter out = new PrintWriter(new OutputStreamWriter(new FileOutputStream(new File(textDir, basename
 						+ db.getProp(db.TEXTEXT))), "UTF-8"));
 				String text = line.substring(line.indexOf("\"") + 1, line.lastIndexOf("\""));
-				System.out.println(text);
+				System.out.println("Adding: " + text);
 				out.print(text);
 				out.flush();
 				out.close();
