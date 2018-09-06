@@ -25,8 +25,6 @@ EXAMPLE:
   exit 1
 fi
 
-BINDIR="`dirname "$0"`"
-export MARY_BASE="`(cd "$BINDIR"/.. ; pwd)`"
 
 VOICE_NAME=$1
 
@@ -36,3 +34,4 @@ python3 ${PYTHON_SCRIPT} \
 	${VOICE_NAME} \
         ${MARYTTS_VERSION} \
         ${MARYTTS_HOME}	
+
