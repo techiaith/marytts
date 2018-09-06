@@ -1,7 +1,7 @@
 #!/bin/bash
 
-LIB_SRC="/home/marytts/marytts-languages/marytts-lang-cy/lib/modules/cy/lexicon"
-MARYTTS_CY_SRC="/home/marytts/marytts-languages/marytts-lang-cy/src/main/resources/marytts/language/cy/lexicon"
+LIB_SRC="${MARYTTS_CY_HOME}/lib/modules/cy/lexicon"
+MARYTTS_CY_SRC="${MARYTTS_CY_HOME}/src/main/resources/marytts/language/cy/lexicon"
 
 getlexicon-cy.sh
 

@@ -254,7 +254,9 @@ public class DBHandler {
 			out.close();
 			InputStream filteredInput = new BufferedInputStream(new FileInputStream(tmpFile));
 			XmlDumpReader xmlReader = new XmlDumpReader(filteredInput, sqlWriter);
-			xmlReader.readDump(); // this will close wikiDB.cn, so that it will have to be opened again:
+			try {	
+				xmlReader.readDump(); // this will close wikiDB.cn, so that it will have to be opened again:
+			} catch (Exception e){ System.out.println(e.getMessage());}
 			tmpFile.delete();
 			if (wikiDB.cn.isClosed()) {
 				wikiDB.createDBConnection(host, db, user, passwd);

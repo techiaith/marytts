@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 # -*- coding:utf-8 -*-
 import os
 import os.path
@@ -20,7 +20,12 @@ componentxmlfilename = 'voice-' + voicename + '-' + marytts_version + '-componen
 
 source_package_dir = os.path.join(marytts_home, 'voice-builder', voicename, 'mary', 'voice-' + voicename, 'target')
 
-print ("Chwilio am ffeiliau llais yn : %s" % source_package_dir)
+if source_package_dir is None:
+    print ("Chwilio am ffeiliau llais yn : %s" % possible_source_package_dir)
+    if os.path.isfile(os.path.join(possible_source_package_dir, zipfilename)) and os.path.isfile(os.path.join(possible_source_package_dir, componentxmlfilename)):
+        source_package_dir = possible_source_package_dir
+
+print ( "Wedi canfod yn %s " % source_package_dir )
 
 #
 target_installation_dir = os.path.join(marytts_home, 'target', 'marytts-' + marytts_version)
@@ -54,4 +59,3 @@ tree.write(open(source_xml_component_file,'w'), encoding='unicode')
 target_installation_xml_component_file = os.path.join(target_installation_dir, 'installed', 'voice-' + voicename + '-' + marytts_version + '-component.xml')
 print ("Sgwennu manylion llais i %s " % (target_installation_xml_component_file))  
 copyfile(source_xml_component_file, target_installation_xml_component_file)
-

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ##################################
 # create_database_docker.sh

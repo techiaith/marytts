@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#DATA_SRC="http://techiaith.cymru/lts/"
-
 DICT_URL=http://techiaith.cymru/lts/geiriadur-ynganu-bangor/bangordict.dict
 LICENSE_URL=http://techiaith.cymru/lts/geiriadur-ynganu-bangor/LICENSE
 

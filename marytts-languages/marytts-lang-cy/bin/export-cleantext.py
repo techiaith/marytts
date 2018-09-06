@@ -1,5 +1,6 @@
 #!/bin/python3
 # -*- coding:utf-8 -*-
+import os
 import sys
 import csv
 import mysql.connector
@@ -28,6 +29,9 @@ with open(outfile, 'w', encoding='utf-8') as out_file:
         csv_writer = csv.writer(out_file, delimiter='|')
         csv_writer.writerow([i[0] for i in cursor.description])
         csv_writer.writerows(cursor)
+    elif outfile.endswith('.txt'):
+        for row in cursor:
+            out_file.write(row[1].decode('utf-8') + '\n')
     elif outfile.endswith('.py'):
         out_file.write("""
 #!/usr/bin/env python 
