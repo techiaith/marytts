@@ -12,25 +12,31 @@ DOWNLOAD_URL = 'http://techiaith.cymru/marytts/';
 voicename = sys.argv[1]
 marytts_version = sys.argv[2]
 marytts_home = sys.argv[3]
+marytts_voices_home = sys.argv[4]
 
-print (voicename, marytts_version, marytts_home)
+print (voicename, marytts_version, marytts_home, marytts_voices_home)
 
 zipfilename = 'voice-' + voicename + '-' + marytts_version + '.zip'
 componentxmlfilename = 'voice-' + voicename + '-' + marytts_version + '-component.xml'
 
-source_package_dir = os.path.join(marytts_home, 'voice-builder', voicename, 'mary', 'voice-' + voicename, 'target')
+source_package_dir = os.path.join(marytts_voices_home, voicename, 'mary', 'voice-' + voicename, 'target')
+
+#if source_package_dir is None:
+#    print ("Chwilio am ffeiliau llais yn : %s" % possible_source_package_dir)
+#    if os.path.isfile(os.path.join(possible_source_package_dir, zipfilename)) and os.path.isfile(os.path.join(possible_source_package_dir, componentxmlfilename)):
+#        source_package_dir = possible_source_package_dir
 
 if source_package_dir is None:
-    print ("Chwilio am ffeiliau llais yn : %s" % possible_source_package_dir)
-    if os.path.isfile(os.path.join(possible_source_package_dir, zipfilename)) and os.path.isfile(os.path.join(possible_source_package_dir, componentxmlfilename)):
-        source_package_dir = possible_source_package_dir
+    print ( "Metho canfod y llais yn %s" % source_package_dir)
+    sys.exit(1)
 
-print ( "Wedi canfod yn %s " % source_package_dir )
+print ( "Wedi canfod y llais %s yn %s " % (voicename, source_package_dir ))
 
+#
 #
 target_installation_dir = os.path.join(marytts_home, 'target', 'marytts-' + marytts_version)
 
-print ("Gosod llais yn : %s " % target_installation_dir)
+print ("Wrthi'n gosod llais yn : %s " % target_installation_dir)
 
 zipfileloc = os.path.join(source_package_dir, zipfilename)
 zippedfile = zipfile.ZipFile(zipfileloc)
@@ -59,3 +65,5 @@ tree.write(open(source_xml_component_file,'w'), encoding='unicode')
 target_installation_xml_component_file = os.path.join(target_installation_dir, 'installed', 'voice-' + voicename + '-' + marytts_version + '-component.xml')
 print ("Sgwennu manylion llais i %s " % (target_installation_xml_component_file))  
 copyfile(source_xml_component_file, target_installation_xml_component_file)
+
+print ("Wedi ei osod %s yn lwyddianus" % voicename)

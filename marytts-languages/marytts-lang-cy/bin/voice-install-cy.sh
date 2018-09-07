@@ -1,10 +1,6 @@
 #!/bin/bash
-
 # EXIT ERROR settings 
 set -o errexit
-
-DESCRIPTION="Install built voice into a MaryTTS system"
-MYDIR="$(dirname "${BASH_SOURCE[0]}")"
 
 NUMARG=1
 if [ $# -ne $NUMARG ]
@@ -13,7 +9,7 @@ then
         `basename $0`
 
 DESCRIPTION:
-    $DESCRIPTION
+    Install built voice into a MaryTTS system
 
 USAGE: 
         `basename $0` [voice_name] 
@@ -25,9 +21,8 @@ EXAMPLE:
   exit 1
 fi
 
-
+MYDIR="$(dirname "${BASH_SOURCE[0]}")"
 BINDIR="`dirname "$0"`"
-export MARY_BASE="`(cd "$BINDIR"/.. ; pwd)`"
 
 VOICE_NAME=$1
 
@@ -36,4 +31,5 @@ PYTHON_SCRIPT="${MYDIR}/install-voice.py"
 python3 ${PYTHON_SCRIPT} \
 	${VOICE_NAME} \
         ${MARYTTS_VERSION} \
-        ${MARYTTS_HOME}	
+        ${MARYTTS_HOME} \
+        ${MARYTTS_VOICES_HOME}	

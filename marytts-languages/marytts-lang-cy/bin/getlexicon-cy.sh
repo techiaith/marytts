@@ -3,7 +3,7 @@
 DICT_URL=http://techiaith.cymru/lts/geiriadur-ynganu-bangor/bangordict.dict
 LICENSE_URL=http://techiaith.cymru/lts/geiriadur-ynganu-bangor/LICENSE
 
-LEXICON_ROOT="/home/marytts/marytts-languages/marytts-lang-cy/lib/modules/cy/lexicon"
+LEXICON_ROOT="${MARYTTS_CY_HOME}/lib/modules/cy/lexicon"
 
 MYDIR="$(dirname "${BASH_SOURCE[0]}")"
 
@@ -27,4 +27,5 @@ cat ${LEXICON_ROOT}/bangordict.dict | uniq | python3 ${PYTHON_SCRIPT} > ${LEXICO
 mv phone_set ${LEXICON_ROOT}/bangordict.phones
 
 echo "--- Completed preparing lexicon ---"
+echo "${LEXICON_ROOT}/cy.txt"
 
