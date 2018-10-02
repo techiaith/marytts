@@ -5,7 +5,7 @@ MARYTTS_CY_SRC="${MARYTTS_CY_HOME}/src/main/resources/marytts/language/cy/lexico
 
 getlexicon-cy.sh
 
-lexicon_lts_pos_builder.sh ${LIB_SRC}/allophones.cy.xml ${LIB_SRC}/cy.txt
+lexicon_lts_pos_builder.sh ${LIB_SRC}/allophones.cy.xml ${LIB_SRC}/cy.txt || exit 1
 
 cp ${LIB_SRC}/allophones.cy.xml ${MARYTTS_CY_SRC}/
 cp ${LIB_SRC}/cy.lts ${MARYTTS_CY_SRC}/
