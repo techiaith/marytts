@@ -1,94 +1,227 @@
-<allophones name="sampa" xml:lang="cy"
+<allophones name="bangor-sampa" xml:lang="cy"
         features="vheight vfront vrnd ctype cplace cvox">
 
         <silence ph="_"/>
 
-        <vowel ph="a" vling="1" vheight="1" vfront="1" vrnd="-"/>
-        <vowel ph="e" vling="1" vheight="1" vfront="3" vrnd="+"/>
-        <vowel ph="i" vling="1" vheight="1" vfront="3" vrnd="+"/>
-        <vowel ph="o" vling="1" vheight="1" vfront="3" vrnd="+"/>
-        <vowel ph="w" vling="1" vheight="1" vfront="3" vrnd="+"/>
-        <vowel ph="y" vling="1" vheight="1" vfront="3" vrnd="+"/>
+	<!-- Phoneset : http://www.cstr.ed.ac.uk/projects/festival/manual/festival_24.html#SEC100 -->
 
-        <vowel ph="@" vling="d" vheight="1" vfront="1" vrnd="+"/>
-        <vowel ph="@@" vling="d" vheight="1" vfront="1" vrnd="-"/>
 
-        <vowel ph="aa" vling="d" vheight="1" vfront="1" vrnd="+"/>
-        <vowel ph="aay" vling="d" vheight="3" vfront="3" vrnd="-"/>
-        <vowel ph="ai" vling="d" vheight="1" vfront="3" vrnd="+"/>
-        <vowel ph="au" vling="d" vheight="1" vfront="3" vrnd="+"/>
-        <vowel ph="ay" vling="d" vheight="1" vfront="3" vrnd="+"/>
+	<!-- ########################### -->
+	<!-- Vowels  /  Llafariaid       -->
+	<!-- ########################### -->
+	<!--	    
+	    vlng (vowel length): 0-n/a s-short l-long d-dipthong a-schwa
+	    vheight (vowel height): 0-n/a 1-high 2-mid 3-low (1-close 2-mid 3-open)    
+	    vfront (vowel frontness): 0-n/a 1-front 2-mid 3-back
+	    vrnd (lip rounding): 0=n/a +=on -=off
+	-->
 
-        <vowel ph="ee" vling="d" vheight="1" vfront="1" vrnd="+"/>
-        <vowel ph="ei" vling="d" vheight="3" vfront="3" vrnd="-"/>
-        <vowel ph="eu" vling="d" vheight="1" vfront="3" vrnd="+"/>
-        <vowel ph="ey" vling="d" vheight="1" vfront="3" vrnd="+"/>
+	<!-- ########################### -->
+	<!-- Monophthongs / Unseiniaid   -->
+	<!-- ########################### -->
+
+        <!-- open front unrounded vowel /a/ -->
+        <vowel ph="a" vc="+" vlng="0" vheight="3" vfront="1" vrnd="-"/>
+
+        <!-- open front unrounded vowel (long) /aː/ 'sâl, tad' -->
+        <vowel ph="aa" vc="+" vlng="l" vheight="3" vfront="1" vrnd="-"/>
+
+        <!-- open mid-front unrounded vowel /ɛ/ -->
+        <vowel ph="e" vc="+" vlng="0" vheight="2" vfront="1" vrnd="-"/>
+
+        <!-- open mid-front unrounded vowel (long) /eː/ 'mêl' -->
+        <vowel ph="ee" vc="+" vlng="l" vheight="2" vfront="1" vrnd="-"/>
+
+        <!-- near-close near-front unrounded vowel /ɪ/ -->
+        <vowel ph="i" vc="+" vlng="0" vheight="3" vfront="1" vrnd="-"/>
+
+        <!-- near-close near-front unrounded vowel (long) /iː/ -->
+        <vowel ph="ii" vc="+" vlng="l" vheight="3" vfront="1" vrnd="-"/>
+
+        <!-- open-mid back rounded vowel /ɔ/ -->
+        <vowel ph="o" vc="+" vlng="0" vheight="2" vfront="2" vrnd="+"/>
+
+        <!-- open-mid back rounded vowel (long) /oː/ 'tôn' -->
+        <vowel ph="oo" vc="+" vlng="l" vheight="2" vfront="2" vrnd="+"/>
+
+        <!-- close back rounded vowel /ʊ/ 'cwm'-->
+        <vowel ph="u" vc="+" vlng="0" vheight="1" vfront="3" vrnd="+"/>
+
+        <!-- close back rounded vowel (long) /uː / 'cŵn, stŵr' -->
+        <vowel ph="uu" vc="+" vlng="l" vheight="1" vfront="3" vrnd="+"/>
+
+        <!-- mid-central vowel (schwa) /ə/ -->
+        <vowel ph="@" vc="+" vlng="a" vheight="2" vfront="2" vrnd="-"/>
+     
+        <!-- open-mid central unrounded vowel (long) /ɜː/ 'word' -->
+        <vowel ph="@@" vc="+" vlng="l" vheight="2" vfront="1" vrnd="-"/>
+
+        <!-- near-close central unrounded vowel /ɨ/ 'ynys' -->
+        <vowel ph="y" vc="+" vlng="0" vheight="3" vfront="2" vrnd="-"/>
+
+        <!-- near-close central unrounded vowel (long) / ɨː/ 'tŷ' -->
+        <vowel ph="yy" vc="+" vlng="l" vheight="3" vfront="2" vrnd="-"/>
+
+
+
+	<!-- ############################-->
+	<!-- Diphthongs / Deuseiniaid    -->
+	<!-- ############################-->
+
+	<!-- Front closing -->
+
+	<!-- /aɪ/  'llais, tai'  -->	
+	<vowel ph="ai" vc="+" vlng="d" vheight="1" vfront="1" vrnd="-"/>
+
+	<!-- /əɪ/ 'tei, neidio' -->
+	<vowel ph="ei" vc="+" vlng="d" vheight="1" vfront="1" vrnd="-"/>
+
+	<!-- /ɛʊ/ 'mewn, llew' -->
+	<vowel ph="eu" vc="+" vlng="d" vheight="1" vfront="1" vrnd="+"/>
+
+	<!-- /ɔɪ/ 'cnoi' -->
+	<vowel ph="oi" vc="+" vlng="d" vheight="1" vfront="1" vrnd="-"/>
+
+
+	<!-- Central closing -->
+
+	<!-- /aɨ/ 'haul, cau' -->
+	<vowel ph="ay" vc="+" vlng="d" vheight="2" vfront="2" vrnd="-"/>
+
+	<!-- /ɑɨ/ 'cae' -->
+	<vowel ph="aay" vc="+" vlng="d" vheight="2" vfront="2" vrnd="-"/>
+
+	<!-- /əɨ/ 'creu, neu' -->
+	<vowel ph="ey" vc="+" vlng="d" vheight="2" vfront="2" vrnd="-"/>
+
+	<!-- /ɔɨ/ 'troed, coed' -->
+	<vowel ph="oy" vc="+" vlng="d" vheight="2" vfront="2" vrnd="-"/>
+
+	<!-- /ʊɨ/ 'dwyn, mwy' -->
+	<vowel ph="uy" vc="+" vlng="d" vheight="2" vfront="2" vrnd="+"/>
+
+
+	<!-- Back closing -->
+
+	<!-- /ɪʊ/ 'briw' -->          |
+	<vowel ph="iu" vc="+" vlng="d" vheight="3" vfront="1" vrnd="+"/>
+
+	<!-- /əʊ/ 'trowsus' -->
+	<vowel ph="ou" vc="+" vlng="d" vheight="3" vfront="1" vrnd="+"/>
+
+	<!-- /ɨʊ/ 'clyw, Duw' -->
+	<vowel ph="yu" vc="+" vlng="d" vheight="3" vfront="1" vrnd="+"/>
+
+	<!-- /aʊ/ 'pawb, llaw' -->
+	<vowel ph="au" vc="+" vlng="d" vheight="3" vfront="1" vrnd="+"/>
+
+
+	<!-- Extension / Estyniad -->
+
+	<!-- /ər/ approximation of rhotic r-vowel (en_US) 'mirror, fire' -->
+	<vowel ph="@r" vc="+" vlng="d" vheight="2" vfront="2" vrnd="-"/>
+
+
+
+	<!-- ######################################## -->
+	<!-- Consonants      /      Cytseiniaid       -->
+	<!-- ######################################## -->
+	<!--	    
+	    cplace: 0-n/a l-labial (bilabial) a-alveolar p-palatal (trill) b-labio_dental d-dental v-velar (uvular) g-? (glottal)
+	    ctype: 0-n/a s-stop f-fricative a-affricative n-nasal l-liquid (approximant) r-r
+	    cvox: 0=n/a +=on -=off
+	    vc: 0=n/a +=vowel -=consonant
+	-->
+
+        <!-- b /b/ voiced stop/plosive bilabial -->
+	<consonant ph="b" vc="-" ctype="s" cplace="l" cvox="+"/>
         
-        <vowel ph="ii" vling="d" vheight="1" vfront="1" vrnd="+"/>
-        <vowel ph="iu" vling="d" vheight="3" vfront="3" vrnd="-"/>
+	<!-- k /k/ voiceless velar stop/plosive -->
+	<consonant ph="k" vc="-" ctype="s" cplace="v" cvox="-"/>
 
-        <vowel ph="j" vling="d" vheight="1" vfront="1" vrnd="+"/>
-        <vowel ph="jh" vling="d" vheight="1" vfront="1" vrnd="-"/>
-        
-        <vowel ph="oa" vling="d" vheight="1" vfront="1" vrnd="+"/>
-        <vowel ph="oi" vling="d" vheight="3" vfront="3" vrnd="-"/>
-        <vowel ph="oo" vling="d" vheight="1" vfront="3" vrnd="+"/>
-        <vowel ph="oy" vling="d" vheight="1" vfront="3" vrnd="+"/>
+        <!-- x /χ/ voiceless uvular fricative -->
+	<consonant ph="x" vc="-" ctype="f" cplace="v" cvox="-"/>
 
-        <vowel ph="ui" vling="d" vheight="1" vfront="1" vrnd="+"/>
-        <vowel ph="uu" vling="d" vheight="1" vfront="1" vrnd="-"/>
-        <vowel ph="uy" vling="d" vheight="2" vfront="3" vrnd="+"/>
-        
-        <vowel ph="yu" vling="d" vheight="1" vfront="1" vrnd="+"/>
-        <vowel ph="yy" vling="d" vheight="3" vfront="3" vrnd="-"/>
+        <!-- d /d/ voiced alveolar stop/plosive -->
+	<consonant ph="d" vc="-" ctype="s" cplace="a" cvox="+"/>
 
-        <consonant ph="b" ctype="s" cplace="l" cvox="-"/>
+        <!-- dh /ð/ voiced dental fricative -->
+	<consonant ph="dh" vc="-" ctype="f" cplace="d" cvox="+"/>
 
-        <consonant ph="ch" ctype="s" cplace="v" cvox="+"/>
+        <!-- v /v/ voiced labiodental fricative -->
+	<consonant ph="v" vc="-" ctype="f" cplace="b" cvox="+"/>
 
-        <consonant ph="d" ctype="a" cplace="p" cvox="+"/>
-        <consonant ph="dh" ctype="s" cplace="v" cvox="+"/>
+        <!-- f /f/ voiceless labiodental fricative -->
+	<consonant ph="f" vc="-" ctype="f" cplace="b" cvox="-"/>
 
-        <consonant ph="f" ctype="s" cplace="v" cvox="-"/>
+        <!-- g /g/ voiced velar stop/plosive -->
+	<consonant ph="g" vc="-" ctype="s" cplace="v" cvox="+"/>
 
-        <consonant ph="g" ctype="s" cplace="a" cvox="-"/>
+        <!-- hh /h/ voiceless glottal fricative  -->
+	<consonant ph="hh" vc="-" ctype="f" cplace="g" cvox="-"/>
 
-        <consonant ph="h" ctype="a" cplace="p" cvox="+"/>
-        <consonant ph="hh" ctype="a" cplace="p" cvox="+"/>
+        <!-- jh /dʒ/ voiced postalveolar affricate 'Jones, John' -->
+	<consonant ph="jh" vc="-" ctype="a" cplace="a" cvox="+"/>
 
-        <consonant ph="k" ctype="a" cplace="p" cvox="+"/>
+        <!-- l  /l/ voiced alveolar lateral approximant -->
+	<consonant ph="l" vc="-" ctype="l" cplace="a" cvox="+"/>
 
-        <consonant ph="l" ctype="s" cplace="v" cvox="+"/>
-        <consonant ph="lh" ctype="s" cplace="v" cvox="+"/>
-        <consonant ph="lw" ctype="s" cplace="v" cvox="+"/>
+        <!-- lh /ɬ/ voiceless alveolar lateral fricative -->
+	<consonant ph="lh" vc="-" ctype="f" cplace="a" cvox="-"/>
 
-        <consonant ph="m" ctype="a" cplace="p" cvox="+"/>
-        <consonant ph="mh" ctype="s" cplace="v" cvox="+"/>
+        <!-- m /m/ voiced bilabial nasal -->
+	<consonant ph="m" vc="-" ctype="n" cplace="l" cvox="+"/>
 
-        <consonant ph="n" ctype="a" cplace="p" cvox="+"/>
-        <consonant ph="ng" ctype="a" cplace="p" cvox="-"/>
-        <consonant ph="ngh" ctype="s" cplace="v" cvox="+"/>
-        <consonant ph="nh" ctype="s" cplace="v" cvox="+"/>
-        <consonant ph="nw" ctype="s" cplace="v" cvox="+"/>
+        <!-- mh /m/ voiceless bilabial nasal -->
+	<consonant ph="mh" vc="-" ctype="n" cplace="l" cvox="-"/>
 
-        <consonant ph="p" ctype="s" cplace="v" cvox="+"/>
+        <!-- n  /n/ voiced alveolar nasal -->
+	<consonant ph="n" vc="-" ctype="n" cplace="a" cvox="+"/>
 
-        <consonant ph="r" ctype="s" cplace="v" cvox="+"/>
-        <consonant ph="rh" ctype="a" cplace="p" cvox="-"/>
-        <consonant ph="rw" ctype="a" cplace="p" cvox="-"/>
+        <!-- nh /n̥/ voiceless alveolar nasal -->
+	<consonant ph="nh" vc="-" ctype="n" cplace="a" cvox="-" />
 
-        <consonant ph="s" ctype="a" cplace="p" cvox="+"/>
-        <consonant ph="sh" ctype="s" cplace="v" cvox="+"/>
+        <!-- ng /ŋ/ voiced velar nasal -->
+	<consonant ph="ng" vc="-" ctype="n" cplace="v" cvox="+" />
 
-        <consonant ph="t" ctype="a" cplace="p" cvox="-"/>
-        <consonant ph="th" ctype="a" cplace="p" cvox="-"/>
+        <!-- ngh /ŋ̊/ voiceless velar nasal -->
+	<consonant ph="ngh" vc="-" ctype="n" cplace="v" cvox="-" />
 
-        <consonant ph="v" ctype="a" cplace="p" cvox="+"/>
+        <!-- p /p/ voiceless plosive bilabial -->
+	<consonant ph="p" vc="-" ctype="s" cplace="l" cvox="-" />
 
-        <consonant ph="x" ctype="s" cplace="v" cvox="+"/>
+        <!-- r /r/ voiced alveolar trill -->
+	<consonant ph="r" vc="-" ctype="p" cplace="a" cvox="+" />
 
-        <consonant ph="z" ctype="a" cplace="p" cvox="-"/>
-        <consonant ph="zh" ctype="a" cplace="p" cvox="-"/>
+        <!-- rh /r̥/ voiceless alveolar trill  -->
+	<consonant ph="rh" vc="-" ctype="p" cplace="a" cvox="-" />
+
+        <!-- s /s/ voiceless alveolar fricative -->
+	<consonant ph="s" vc="-" ctype="f" cplace="a" cvox="-" />
+
+        <!-- sh /ʃ/ voiceless postalveolar fricative -->
+	<consonant ph="sh" vc="-" ctype="f" cplace="a" cvox="-" />
+
+        <!-- t /t/ voiceless alveolar stop/plosive -->
+	<consonant ph="t" vc="-" ctype="s" cplace="a" cvox="-" />
+
+        <!-- th /θ/ voiceless dental fricative -->
+	<consonant ph="th" vc="-" ctype="f" cplace="d" cvox="-" />
+
+        <!-- ch /tʃ/ voiceless postalveolar affricate 'cwtsh' -->
+	<consonant ph="ch" vc="-" ctype="a" cplace="a" cvox="-" />
+
+        <!-- z /z/ voiced alveolar fricative 'crazy' -->
+	<consonant ph="z" vc="-" ctype="f" cplace="a" cvox="+" />
+
+        <!-- zh /ʒ/ voiced postalveolar fricative  'explosion' -->
+	<consonant ph="zh" vc="-" ctype="f" cplace="a" cvox="+" />
+
+        <!-- w /w/ voiced labial-velar approximant 'swigen' -->
+	<consonant ph="w" vc="-" ctype="l" cplace="l" cvox="+" />
+
+        <!-- j /j/ voiced palatal approximant 'wincio' -->
+	<consonant ph="j" vc="-" ctype="l" cplace="p" cvox="+"/>
 
 </allophones>
 

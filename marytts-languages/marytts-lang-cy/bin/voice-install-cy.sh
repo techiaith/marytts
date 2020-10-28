@@ -2,6 +2,9 @@
 # EXIT ERROR settings 
 set -o errexit
 
+DESCRIPTION="Install built voice into a MaryTTS system"
+MYDIR="$(dirname "${BASH_SOURCE[0]}")"
+
 NUMARG=1
 if [ $# -ne $NUMARG ]
 then
@@ -26,7 +29,7 @@ BINDIR="`dirname "$0"`"
 
 VOICE_NAME=$1
 
-PYTHON_SCRIPT="${MYDIR}/install-voice.py"
+PYTHON_SCRIPT="${MYDIR}/python/install-voice.py"
 
 python3 ${PYTHON_SCRIPT} \
 	${VOICE_NAME} \

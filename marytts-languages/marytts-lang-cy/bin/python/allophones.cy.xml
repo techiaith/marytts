@@ -116,11 +116,6 @@
 	<vowel ph="au" vc="+" vlng="d" vheight="3" vfront="1" vrnd="+"/>
 
 
-	<!-- Extension / Estyniad -->
-
-	<!-- /ər/ approximation of rhotic r-vowel (en_US) 'mirror, fire' -->
-	<vowel ph="@r" vc="+" vlng="d" vheight="2" vfront="2" vrnd="-"/>
-
 
 
 	<!-- ######################################## -->

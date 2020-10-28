@@ -28,7 +28,7 @@ fi
 
 VOICE_NAME=$1
 
-PYTHON_SCRIPT="${MYDIR}/download-voice.py"
+PYTHON_SCRIPT="${MYDIR}/python/download-voice.py"
 
 python3 ${PYTHON_SCRIPT} \
 	${VOICE_NAME} \

@@ -22,10 +22,14 @@ componentxmlfilename = 'voice-' + voicename.lower() + '-' + marytts_version + '-
 source_package_dir = os.path.join(marytts_voices_home, voicename, 'mary', 'voice-' + voicename, 'target')
 
 if source_package_dir is None:
-    print ( "Metho canfod y llais yn %s" % source_package_dir)
-    sys.exit(1)
+    possible_source_package_dir = os.path.join(marytts_home, 'voicebuilder', voicename, 'mary', 'voice-' + voicename, 'target')
+    print ("Chwilio am ffeiliau llais yn : %s" % possible_source_package_dir)
+    if os.path.isfile(os.path.join(possible_source_package_dir, zipfilename)) and os.path.isfile(os.path.join(possible_source_package_dir, componentxmlfilename)):
+        source_package_dir = possible_source_package_dir
 
 print ( "Wedi canfod y llais %s yn %s " % (voicename, source_package_dir ))
+print ( "Wedi canfod yn %s " % source_package_dir )
+
 
 #
 #

@@ -158,7 +158,7 @@ public class DatabaseImportMainHeadless {
 		} catch (IOException e) {
 			throw new IOException("Problem reading list of voice import components -- importMain.config seems broken", e);
 		}
-		
+
 		String[][] result = new String[groups.size()][];
 		for (int i = 0; i < groups.size(); i++) {
 			String groupKey = groups.get(i);
@@ -180,7 +180,6 @@ public class DatabaseImportMainHeadless {
 	public static void main(String[] args) throws Exception {
 
 		System.out.println("DatabaseImportHeadless::main ");
-
 		File voiceDir = determineVoiceBuildingDir(args);
 
 		if (voiceDir == null) {

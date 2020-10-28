@@ -128,8 +128,7 @@ public class FeatureMaker {
 						processCleanTextRecords = true;
 					else {
 						processCleanTextRecords = false;
-						System.out
-								.print("    please check the \"locale\" prefix of the dbselection TABLE you want to create or add to.");
+						System.out.print("    please check the \"locale\" prefix of the dbselection TABLE you want to create or add to.");
 					}
 				}
 			} catch (Exception e) {
@@ -579,7 +578,7 @@ public class FeatureMaker {
 						// check if the sentence is not .
 						if (!sentence.toString().contentEquals(".")) {
 							sentenceList.add(sentence.toString());
-							// System.out.println("reliable sentence=" + sentence.toString() + "\n");
+							System.out.println("reliable sentence=" + sentence.toString() + "\n");
 						}
 					} else {
 						// just print useless sentence to log file
@@ -603,7 +602,7 @@ public class FeatureMaker {
 							if (strangeSymbols)
 								wikiToDB.setSentenceRecord(id, "strangeSymbols", true);
 
-							// System.out.println("unreliable sentence: " + sentence.toString());
+							System.out.println("unreliable sentence: " + sentence.toString());
 						}
 					}
 					sentenceIndex++;
@@ -642,10 +641,15 @@ public class FeatureMaker {
 			if ((credibility = checkReliability((Element) nextToken)) > 0) {
 				// memorize that we found unreliable sentence
 				usefulSentence = false;
-				if (credibility == 1)
+				if (credibility == 1) {
+					word = MaryDomUtils.tokenText((Element) nextToken);
+					System.out.println("unknown word=" + word);
 					unknownWords = true;
+				}
 				else if (credibility == 2)
+				{
 					strangeSymbols = true;
+				}
 			}
 			if (sentence == null) {
 				sentence = new StringBuilder();
@@ -710,7 +714,7 @@ public class FeatureMaker {
 					if (strictReliability) {
 						// method other than lexicon or userdict -> unreliable
 						newUsefulSentence = 1;
-						// System.out.println("  unknownwords: method other than lexicon or userdict -> unreliable");
+						System.out.println("  unknownwords: method other than lexicon or userdict -> unreliable ");
 					} else {
 						// lax credibility criterion
 						if (!method.equals("phonemiseDenglish") && !method.equals("compound") && !method.equals("rules")) { // NEW:
@@ -720,7 +724,7 @@ public class FeatureMaker {
 							// method other than lexicon, userdict, phonemiseDenglish
 							// or compound -> unreliable
 							newUsefulSentence = 1;
-							// System.out.println("   unknownwords: method other than lexicon, userdict, phonemiseDenglish or compound -> unreliable");
+							System.out.println("   unknownwords: method other than lexicon, userdict, phonemiseDenglish or compound -> unreliable");
 						} // else method is phonemiseDenglish or compound -> credible
 					}
 				}// else method is lexicon or userdict -> credible
@@ -732,7 +736,7 @@ public class FeatureMaker {
 			if (".,'`:#$".indexOf(pos.substring(0, 1)) == -1) {
 				// no transcription given -> unreliable
 				newUsefulSentence = 2;
-				// System.out.println("  strangeSymbols: no transcription given -> unreliable");
+				System.out.println("  strangeSymbols: no transcription given -> unreliable. Element: " + t.toString());
 			} // else punctuation -> credible
 		}
 		return newUsefulSentence;

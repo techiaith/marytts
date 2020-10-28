@@ -338,12 +338,14 @@ public class HeadlessConverter extends Thread {
 			File outFile = new File(usrHome, "tempOut.wav");
 			
 			String soxCommandLine = soxPath + " " + waveFile + " -r " + targetSamplingRate + " " + outFile.getAbsolutePath();
+
 			Process process = rtime.exec(soxCommandLine);
 			try {
 				process.waitFor();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
+
 			if (!outFile.renameTo(new File(waveFile)))
 				FileUtils.copy(outFile.getAbsolutePath(), waveFile);
 		}
@@ -440,7 +442,6 @@ public class HeadlessConverter extends Thread {
 			String usrdir = System.getProperty("user.home");
 			System.out.println("tmpAudio created in " + usrdir);	
 			File tmpFile = new File(usrdir, "tmpAudio.wav");
-
 			AudioConverterUtils.removeEndpoints(wavFile.getAbsolutePath(), tmpFile.getAbsolutePath(), energyBufferLength,
 					speechStartLikelihood, speechEndLikelihood, shiftFromMinimumEnergyCenter, numClusters,
 					minimumStartSilenceInSeconds, minimumEndSilenceInSeconds);
