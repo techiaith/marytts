@@ -7,7 +7,9 @@ import zipfile
 from shutil import copyfile
 import wget
 
-DOWNLOAD_URL = 'http://techiaith.cymru/marytts/';
+MARYTTS_CY_VERSION = os.environ["MARYTTS_CY_VERSION"]
+DOWNLOAD_URL = 'http://techiaith.cymru/marytts/' + MARYTTS_CY_VERSION + "/"
+
 
 voicename = sys.argv[1]
 marytts_version = sys.argv[2]
